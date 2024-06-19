@@ -4,4 +4,4 @@
     android:id="@+id/chipGroup"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
-    app:singleSelection="false" />
+    app:singleSelection="true" />

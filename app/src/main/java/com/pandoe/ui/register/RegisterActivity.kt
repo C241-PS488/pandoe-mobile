@@ -1,23 +1,28 @@
 package com.pandoe.ui.register
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
+import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
+import com.pandoe.data.result.Result
 import com.pandoe.databinding.ActivityRegisterBinding
+import com.pandoe.ui.login.LoginActivity
 
 class RegisterActivity : AppCompatActivity() {
+
     private lateinit var binding: ActivityRegisterBinding
+    private lateinit var registerViewModel: RegisterViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.registerButton.setOnClickListener {
-            if (validateTextInput()) {
-                // TODO: Do register
-            }
-        }
+        setupViewModel()
+        setupAction()
 
         binding.loginButton.setOnClickListener {
             finish()
@@ -75,5 +80,45 @@ class RegisterActivity : AppCompatActivity() {
     private fun isValidEmail(email: String): Boolean {
         val emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+"
         return email.matches(Regex(emailPattern))
+    }
+
+    private fun showLoading(isLoading: Boolean) {
+        binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
+    }
+
+    private fun setupViewModel() {
+        val factory = RegisterViewModelFactory.getInstance(this)
+        registerViewModel = ViewModelProvider(this, factory)[RegisterViewModel::class.java]
+    }
+
+    private fun setupAction() {
+        binding.registerButton.setOnClickListener {
+            if (validateTextInput()) {
+                val name = binding.edRegisterName.text.toString()
+                val email = binding.edRegisterEmail.text.toString()
+                val password = binding.edRegisterPassword.text.toString()
+                registerViewModel.userRegister(name, email, password).observe(this) { result ->
+                    when (result) {
+                        is Result.Success -> {
+                            showLoading(false)
+                            Toast.makeText(this, "Registrasi berhasil", Toast.LENGTH_SHORT).show()
+                            Intent(this, LoginActivity::class.java).apply {
+                                flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+                                startActivity(this)
+                            }
+                        }
+                        is Result.Loading -> showLoading(true)
+                        is Result.Error -> {
+                            showLoading(false)
+                            if (result.error.contains("Email is already registered. Please use a different email.", ignoreCase = true)) {
+                                Toast.makeText(this, "Email telah terdaftar", Toast.LENGTH_SHORT).show()
+                            } else {
+                                Toast.makeText(this, result.error, Toast.LENGTH_SHORT).show()
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }

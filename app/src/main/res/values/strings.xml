@@ -39,4 +39,6 @@
     <string name="select_business_first">Pilih jenis bisnis terlebih dahulu</string>
     <string name="coming_soon">Coming Soon</string>
     <string name="start_title">Pilih yang Sesuai Denganmu</string>
+    <string name="create_recommendation">Buat Rekomendasi</string>
+    <string name="user_preference_title">Lengkapi data preferensi anda</string>
 </resources>

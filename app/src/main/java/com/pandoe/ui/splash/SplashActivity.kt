@@ -10,9 +10,11 @@ import android.view.WindowInsets
 import android.view.WindowInsetsController
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import com.pandoe.databinding.ActivitySplashBinding
 import com.pandoe.ui.login.LoginActivity
+import com.pandoe.ui.main.MainActivity
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
@@ -20,6 +22,7 @@ import kotlinx.coroutines.launch
 class SplashActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySplashBinding
+    private lateinit var splashViewModel: SplashViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,11 +36,26 @@ class SplashActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         hideSystemUI()
+        setupViewModels()
+        checkUser()
+    }
 
-        lifecycleScope.launch {
-            delay(SPLASH_SCREEN_DURATION.toLong())
-            startActivity(Intent(this@SplashActivity, LoginActivity::class.java))
-            finish()
+    private fun setupViewModels() {
+        val factory = SplashViewModelFactory.getInstance(this)
+        splashViewModel = ViewModelProvider(this, factory)[SplashViewModel::class.java]
+    }
+
+    private fun checkUser() {
+        splashViewModel.getUser().observe(this) { user ->
+            lifecycleScope.launch {
+                delay(SPLASH_SCREEN_DURATION.toLong())
+                if (user.isLogin) {
+                    startActivity(Intent(this@SplashActivity, MainActivity::class.java))
+                } else {
+                    startActivity(Intent(this@SplashActivity, LoginActivity::class.java))
+                }
+                finish()
+            }
         }
     }
 

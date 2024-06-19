@@ -1,15 +1,18 @@
 package com.pandoe.ui.userpreference
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintSet
 import com.google.android.material.chip.Chip
 import com.google.android.material.chip.ChipGroup
 import com.pandoe.R
 import com.pandoe.databinding.ActivityUserPreferenceBinding
+import com.pandoe.ui.main.MainActivity
 
 class UserPreferenceActivity : AppCompatActivity() {
 
@@ -27,8 +30,18 @@ class UserPreferenceActivity : AppCompatActivity() {
 
         addChipGroupSection("Hobi", listOf("Reading", "Traveling", "Cooking", "Hiking", "Gaming", "Swimming", "Photography", "Writing", "Painting", "Gardening"), hobbySelection)
         addChipGroupSection("Pengalaman", listOf("Internship", "Full-time Job", "Freelance", "Part-time Job", "Volunteer", "Research Assistant", "Teaching Assistant", "Consultant"), experinceSelection)
-        addChipGroupSection("Lama Pengalaman", listOf("1-2th", "3-5th", ">5th", "<1th", "6-10th", ">10th"), durationSelection)
-        addChipGroupSection("Asset", listOf("1-10jt", "11-30jt", ">30jt", "31-50jt", "51-100jt", ">100jt"), assetSelection)
+        addChipGroupSection("Lama Pengalaman", listOf("1-2th", "3-5th", "6-10th", ">10th"), durationSelection)
+        addChipGroupSection("Asset", listOf("Rendah", "Menengah", "Tinggi"), assetSelection)
+
+        binding.generateRecommendationButton.setOnClickListener {
+            if (validateSelections()) {
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+                finish()
+            } else {
+                Toast.makeText(this, "Harap lengkapi semua pilihan", Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 
     private fun addChipGroupSection(title: String, options: List<String>, selectionList: MutableList<String>) {
@@ -88,5 +101,9 @@ class UserPreferenceActivity : AppCompatActivity() {
         }
 
         set.applyTo(binding.chipGroupContainer)
+    }
+
+    private fun validateSelections(): Boolean {
+        return hobbySelection.isNotEmpty() && experinceSelection.isNotEmpty() && durationSelection.isNotEmpty() && assetSelection.isNotEmpty()
     }
 }
