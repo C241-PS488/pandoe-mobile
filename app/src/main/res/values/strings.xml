@@ -31,4 +31,12 @@
     <string name="input_name_hint">Masukkan nama kamu</string>
     <string name="confirm_password">Konfirmasi Password</string>
     <string name="confirm_password_input_hint">Konfirmasi password kamu</string>
+    <string name="start">Mulai</string>
+    <string name="growth_business_description">Bisa membuat bisnis yang sesuai dan mampu bersaing dengan pembisnis lainnya.</string>
+    <string name="growth_business_titile">Kembangkan Bisnis</string>
+    <string name="new_business_description">Ingin memulai bisnis yang cemerlang, dan bisa berkembang kedepannya.</string>
+    <string name="new_business_titile">Memulai Bisnis</string>
+    <string name="select_business_first">Pilih jenis bisnis terlebih dahulu</string>
+    <string name="coming_soon">Coming Soon</string>
+    <string name="start_title">Pilih yang Sesuai Denganmu</string>
 </resources>

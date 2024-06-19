@@ -13,6 +13,12 @@
         android:theme="@style/Theme.Pandoe"
         tools:targetApi="31">
         <activity
+            android:name=".ui.userpreference.UserPreferenceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.start.StartActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.main.MainActivity"
             android:exported="false" />
         <activity

@@ -5,8 +5,8 @@ import android.os.Bundle
 import android.text.TextUtils
 import androidx.appcompat.app.AppCompatActivity
 import com.pandoe.databinding.ActivityLoginBinding
-import com.pandoe.ui.main.MainActivity
 import com.pandoe.ui.register.RegisterActivity
+import com.pandoe.ui.start.StartActivity
 
 class LoginActivity : AppCompatActivity() {
 
@@ -17,11 +17,11 @@ class LoginActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.loginButton.setOnClickListener {
-            if (validateTextInput()) {
-                // TODO: Do login
-                startActivity(Intent(this, MainActivity::class.java))
-                finish()
-            }
+//            if (validateTextInput()) {
+//                // TODO: Do login
+//            }
+            startActivity(Intent(this, StartActivity::class.java))
+            finish()
         }
 
         binding.registerButton.setOnClickListener {
