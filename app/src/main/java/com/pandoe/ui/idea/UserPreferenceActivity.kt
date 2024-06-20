@@ -1,4 +1,4 @@
-package com.pandoe.ui.userpreference
+package com.pandoe.ui.idea
 
 import android.content.Intent
 import android.os.Bundle
@@ -12,7 +12,6 @@ import com.google.android.material.chip.Chip
 import com.google.android.material.chip.ChipGroup
 import com.pandoe.R
 import com.pandoe.databinding.ActivityUserPreferenceBinding
-import com.pandoe.ui.main.MainActivity
 
 class UserPreferenceActivity : AppCompatActivity() {
 
@@ -35,7 +34,7 @@ class UserPreferenceActivity : AppCompatActivity() {
 
         binding.generateRecommendationButton.setOnClickListener {
             if (validateSelections()) {
-                val intent = Intent(this, MainActivity::class.java)
+                val intent = Intent(this, GenerateIdeaActivity::class.java)
                 startActivity(intent)
                 finish()
             } else {

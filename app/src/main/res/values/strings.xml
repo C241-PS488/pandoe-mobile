@@ -63,4 +63,6 @@
     <string name="continue_learning">Lanjutkan</string>
     <string name="learning_progress">Progres Belajarmu</string>
     <string name="see_all">Lihat Semua</string>
+    <string name="save">Simpan</string>
+    <string name="generate_business_title">Bisnis yang kami rekomendasikan</string>
 </resources>

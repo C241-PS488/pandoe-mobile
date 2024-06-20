@@ -6,8 +6,8 @@ import androidx.core.view.updatePadding
 import androidx.fragment.app.Fragment
 import com.pandoe.R
 import com.pandoe.databinding.ActivityMainBinding
-import com.pandoe.ui.chat.ChatFragment
 import com.pandoe.ui.course.CourseFragment
+import com.pandoe.ui.fund.FundFragment
 import com.pandoe.ui.home.HomeFragment
 import com.pandoe.ui.profile.ProfileFragment
 
@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
             when (item.itemId) {
                 R.id.nav_home -> selectedFragment = HomeFragment()
                 R.id.nav_course -> selectedFragment = CourseFragment()
-                // R.id.nav_chat -> selectedFragment = ChatFragment()
+                 R.id.nav_fund -> selectedFragment = FundFragment()
                 R.id.nav_profile -> selectedFragment = ProfileFragment()
             }
             selectedFragment?.let { replaceFragment(it) }
