@@ -77,11 +77,10 @@ dependencies {
     implementation(libs.androidx.preference.ktx)
     implementation(libs.androidx.datastore.preferences)
 
-    // Lottie
+    // Image & Animation
     implementation(libs.lottie)
-
-    // Glide
     implementation(libs.glide)
+    implementation (libs.circleimageview)
 
     // Paging
     implementation(libs.androidx.paging.runtime.ktx)

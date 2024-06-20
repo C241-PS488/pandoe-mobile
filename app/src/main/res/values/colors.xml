@@ -17,7 +17,7 @@
     <color name="md_theme_onError">#FFB4AB</color>
     <color name="md_theme_errorContainer">#FF5070</color>
     <color name="md_theme_onErrorContainer">#FFDAD6</color>
-    <color name="md_theme_background">#FFFFFF</color>
+    <color name="md_theme_background">#FAFAFA</color>
     <color name="md_theme_onBackground">#19265A</color>
     <color name="md_theme_surface">#F6FAFB</color>
     <color name="md_theme_onSurface">#181C1E</color>
@@ -113,7 +113,7 @@
     <color name="selectedTabBar">#FF005DAF</color>
 
     <!-- Navigation Bar Colors -->
-    <color name="navbarIcon">#FFD8DCDF</color>
-    <color name="selectedNavbarIcon">#FF34D2C5</color>
+    <color name="navbarItem">#FFD8DCDF</color>
+    <color name="selectedNavbarItem">#003778</color>
     <color name="navbarBackground">#FFFFFFFF</color>
 </resources>

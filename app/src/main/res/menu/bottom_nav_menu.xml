@@ -1,0 +1,28 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home"
+        android:title="@string/home"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/nav_course"
+        android:icon="@drawable/ic_course"
+        android:title="@string/course"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/nav_fun"
+        android:icon="@drawable/ic_funding"
+        android:title="@string/funding"
+        app:showAsAction="ifRoom" />
+<!--    <item-->
+<!--        android:id="@+id/nav_chat"-->
+<!--        android:icon="@drawable/ic_chat"-->
+<!--        android:title="@string/chat"-->
+<!--        app:showAsAction="ifRoom" />-->
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/ic_profile"
+        android:title="@string/profile"
+        app:showAsAction="ifRoom" />
+</menu>

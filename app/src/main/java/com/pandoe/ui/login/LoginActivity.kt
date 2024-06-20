@@ -10,6 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.pandoe.data.model.User
 import com.pandoe.data.result.Result
 import com.pandoe.databinding.ActivityLoginBinding
+import com.pandoe.ui.main.MainActivity
 import com.pandoe.ui.register.RegisterActivity
 import com.pandoe.ui.start.StartActivity
 
@@ -90,17 +91,27 @@ class LoginActivity : AppCompatActivity() {
                             val response = result.data
                             saveUserData(
                                 User(
-                                    "User",
+                                    response.data?.user?.id.toString(),
+                                    response.data?.user?.name.toString(),
+                                    response.data?.user?.email.toString(),
                                     response.data?.token.toString(),
                                     true
                                 )
                             )
                             Toast.makeText(this, "Login berhasil", Toast.LENGTH_SHORT).show()
-                            Intent(this, StartActivity::class.java).apply {
-                                flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
-                                startActivity(this)
+                            if (response.data?.user?.businesses?.size!! > 0) {
+                                Intent(this, MainActivity::class.java).apply {
+                                    flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+                                    startActivity(this)
+                                }
+                                finishAffinity()
+                            } else {
+                                Intent(this, StartActivity::class.java).apply {
+                                    flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+                                    startActivity(this)
+                                }
+                                finishAffinity()
                             }
-                            finishAffinity()
                         }
                         is Result.Loading -> showLoading(true)
                         is Result.Error -> {

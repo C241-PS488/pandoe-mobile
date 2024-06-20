@@ -41,4 +41,17 @@
     <string name="start_title">Pilih yang Sesuai Denganmu</string>
     <string name="create_recommendation">Buat Rekomendasi</string>
     <string name="user_preference_title">Lengkapi data preferensi anda</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Beranda</string>
+    <string name="course">Kelas</string>
+    <string name="funding">Pendanaan</string>
+    <string name="chat">Chat</string>
+    <string name="profile">Profil</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="logout">Logout</string>
+    <string name="help">Bantuan</string>
+    <string name="change_password">Ubah Kata Sandi</string>
+    <string name="privacy">Privasi</string>
+    <string name="account_info">Tentang Akun</string>
 </resources>
