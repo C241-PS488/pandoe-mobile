@@ -44,7 +44,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="home">Beranda</string>
-    <string name="course">Kelas</string>
+    <string name="course">Belajar</string>
     <string name="funding">Pendanaan</string>
     <string name="chat">Chat</string>
     <string name="profile">Profil</string>
@@ -54,4 +54,13 @@
     <string name="change_password">Ubah Kata Sandi</string>
     <string name="privacy">Privasi</string>
     <string name="account_info">Tentang Akun</string>
+    <string name="item_image">Item Image</string>
+    <string name="item_title">Item Title</string>
+    <string name="article">Artikel</string>
+    <string name="greeting_message">Selamat Sore,</string>
+    <string name="tagline">Kembangkan bisnismu bersama Pandoe</string>
+    <string name="learning_status">Ongoing</string>
+    <string name="continue_learning">Lanjutkan</string>
+    <string name="learning_progress">Progres Belajarmu</string>
+    <string name="see_all">Lihat Semua</string>
 </resources>

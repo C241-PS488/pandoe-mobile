@@ -93,4 +93,6 @@ dependencies {
     testImplementation(libs.mockito.core)
     testImplementation(libs.mockito.inline)
 
+    implementation (libs.androidbrowserhelper)
+
 }
