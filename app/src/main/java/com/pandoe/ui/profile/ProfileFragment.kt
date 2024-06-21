@@ -11,7 +11,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
 import com.pandoe.databinding.FragmentProfileBinding
-import com.pandoe.ui.login.LoginActivity
+import com.pandoe.ui.auth.login.LoginActivity
 import com.pandoe.utils.generateProfilePictureUrl
 
 class ProfileFragment : Fragment() {

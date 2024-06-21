@@ -27,10 +27,11 @@ class UserPreferenceActivity : AppCompatActivity() {
         binding = ActivityUserPreferenceBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        addChipGroupSection("Hobi", listOf("Reading", "Traveling", "Cooking", "Hiking", "Gaming", "Swimming", "Photography", "Writing", "Painting", "Gardening"), hobbySelection)
-        addChipGroupSection("Pengalaman", listOf("Internship", "Full-time Job", "Freelance", "Part-time Job", "Volunteer", "Research Assistant", "Teaching Assistant", "Consultant"), experinceSelection)
+        addChipGroupSection("Hobi", listOf("Memasak", "Bepergian", "Membaca", "Fotografi"), hobbySelection)
+        addChipGroupSection("Pengalaman", listOf("Memasak di Rumah", "Koki Profesional", "Membuat Kue", "Blog Makanan"), experinceSelection)
         addChipGroupSection("Lama Pengalaman", listOf("1-2th", "3-5th", "6-10th", ">10th"), durationSelection)
         addChipGroupSection("Asset", listOf("Rendah", "Menengah", "Tinggi"), assetSelection)
+
 
         binding.generateRecommendationButton.setOnClickListener {
             if (validateSelections()) {

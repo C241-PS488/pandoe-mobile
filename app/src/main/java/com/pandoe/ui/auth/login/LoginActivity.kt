@@ -1,4 +1,4 @@
-package com.pandoe.ui.login
+package com.pandoe.ui.auth.login
 
 import android.content.Intent
 import android.os.Bundle
@@ -11,7 +11,7 @@ import com.pandoe.data.model.User
 import com.pandoe.data.result.Result
 import com.pandoe.databinding.ActivityLoginBinding
 import com.pandoe.ui.main.MainActivity
-import com.pandoe.ui.register.RegisterActivity
+import com.pandoe.ui.auth.register.RegisterActivity
 import com.pandoe.ui.start.StartActivity
 
 class LoginActivity : AppCompatActivity() {

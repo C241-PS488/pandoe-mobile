@@ -1,4 +1,4 @@
-package com.pandoe.ui.login
+package com.pandoe.ui.auth.login
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

@@ -1,4 +1,4 @@
-package com.pandoe.ui.register
+package com.pandoe.ui.auth.register
 
 import androidx.lifecycle.ViewModel
 import com.pandoe.data.repository.AuthRepository

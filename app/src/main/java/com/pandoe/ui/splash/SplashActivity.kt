@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import com.pandoe.databinding.ActivitySplashBinding
-import com.pandoe.ui.login.LoginActivity
+import com.pandoe.ui.auth.login.LoginActivity
 import com.pandoe.ui.main.MainActivity
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch

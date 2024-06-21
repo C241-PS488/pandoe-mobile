@@ -1,4 +1,4 @@
-package com.pandoe.ui.register
+package com.pandoe.ui.auth.register
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.pandoe.data.result.Result
 import com.pandoe.databinding.ActivityRegisterBinding
-import com.pandoe.ui.login.LoginActivity
+import com.pandoe.ui.auth.login.LoginActivity
 
 class RegisterActivity : AppCompatActivity() {
 
