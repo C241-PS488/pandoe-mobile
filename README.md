@@ -22,10 +22,6 @@ BASE_URL=https://pandoe-webservice-nlawccmnia-et.a.run.app
 3. Sync Gradle files
 4. Run on Android Device/Emulator
 
-## Deployment
-
-to build this project to .apk run `flutter build apk`
-
 # Documentation
 
 1. install file apk yang sudah di sediakan
