@@ -29,7 +29,7 @@ BASE_URL=https://pandoe-webservice-nlawccmnia-et.a.run.app
 
 ```
 email: test@gmail.com
-password: test123
+password: test1234
 ```
 
 atau lakukan register.
