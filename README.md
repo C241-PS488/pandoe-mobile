@@ -19,9 +19,8 @@ There are several things that you need to do to run this project perfectly:
 BASE_URL=https://pandoe-webservice-nlawccmnia-et.a.run.app
 ```
 
-3. Fetch dependencies
-4. Sync Gradle files
-5. Run on Android Device/Emulator
+3. Sync Gradle files
+4. Run on Android Device/Emulator
 
 ## Deployment
 
@@ -51,10 +50,11 @@ https://github.com/C241-PS488/pandoe-web-service
 
 ## APK
 
-klik link ini untuk mendapatkan file apk: [klik disini.](https://drive.google.com/file/d/1Kwu4SGAfj4GUdIDdS940h8mNrotx354j/view?usp=sharing)
+klik link ini untuk mendapatkan file apk: [klik disini.](https://github.com/C241-PS488/pandoe-mobile/releases/download/v1.0.0/pandoe-v1.0.0.apk)
 
 ## Authors
 
 - **A012D4KY3774 – Fawaz Al Rasyid**
+- 
 
 **C241-PS488** Team for Bangkit Capstone Project
